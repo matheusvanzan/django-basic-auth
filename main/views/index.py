@@ -6,8 +6,6 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 class IndexView(LoginRequiredMixin, View):
     
     def get(self, request):
-        
         data = { 'user': request.user }
-        
         return render(request, 'main/index.html', data)
         

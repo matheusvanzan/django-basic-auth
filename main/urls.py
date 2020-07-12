@@ -16,11 +16,13 @@ Including another URLconf
 from django.urls import path
 
 from main.views.index import IndexView
+from main.views.signup import SignupView
 from main.views.login import LoginView
 from main.views.logout import LogoutView
 
 urlpatterns = [
     path('', IndexView.as_view(), name='index'),
+    path('signup/', SignupView.as_view(), name='signup'),
     path('login/', LoginView.as_view(), name='login'),
     path('logout/', LogoutView.as_view(), name='logout'),
 ]
